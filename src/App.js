@@ -1,26 +1,58 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import DarkModeToggle from './components/DarkModeToggle';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white min-h-screen flex items-center justify-center">
-      <div className="text-center p-8 bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl max-w-md mx-auto">
-        <h1 className="text-5xl font-bold mb-4">🎉 Success!</h1>
-        <h2 className="text-2xl mb-6">ICT 2233 Portfolio</h2>
-        <p className="text-lg mb-6">
-          React + Tailwind CSS is working perfectly!
-        </p>
-        <div className="space-y-2 text-sm bg-black/20 p-4 rounded-lg">
-          <p>✅ React App: Running</p>
-          <p>✅ Tailwind CSS: Configured</p>
-          <p>✅ Dev Branch: Ready</p>
-          <p>✅ GitHub Repo: Connected</p>
-        </div>
-        <button className="mt-6 bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-          Start Building Portfolio
-        </button>
+    <Router basename="/ict2233-ca-02-DB602">
+      <div className="min-h-screen flex flex-col">
+        <nav className="bg-white shadow-lg dark:bg-gray-800">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="flex justify-between items-center py-4">
+              <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-blue-800 dark:text-blue-400">
+                Your Name
+              </Link>
+              <div className="flex items-center space-x-8">
+                <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors dark:text-gray-300">
+                  Home
+                </Link>
+                <Link to="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors dark:text-gray-300">
+                  About
+                </Link>
+                <Link to="/projects" className="text-gray-700 hover:text-blue-600 font-medium transition-colors dark:text-gray-300">
+                  Projects
+                </Link>
+                <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors dark:text-gray-300">
+                  Contact
+                </Link>
+                <DarkModeToggle />
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <main className="flex-grow bg-white dark:bg-gray-900">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        
+        <footer className="bg-gray-800 text-white py-6 dark:bg-gray-900">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+          </div>
+        </footer>
       </div>
-    </div>
+    </Router>
   );
 }
 
