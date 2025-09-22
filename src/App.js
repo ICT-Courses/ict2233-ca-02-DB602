@@ -6,6 +6,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <div className="max-w-6xl mx-auto px-4">
             <div className="flex justify-between items-center py-4">
               <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-blue-800 dark:text-blue-400">
-                Your Name
+                Dasunika Bandara
               </Link>
               <div className="flex items-center space-x-8">
                 <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors dark:text-gray-300">
@@ -46,11 +47,7 @@ function App() {
           </Routes>
         </main>
         
-        <footer className="bg-gray-800 text-white py-6 dark:bg-gray-900">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </Router>
   );
