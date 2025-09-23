@@ -37,7 +37,7 @@ const Navbar = () => {
           >
             Contact
           </Link>
-          {/* Dark Mode Toggle */}
+          {/* Dark mode toggle section */}
           <DarkModeToggle />
         </div>
       </div>

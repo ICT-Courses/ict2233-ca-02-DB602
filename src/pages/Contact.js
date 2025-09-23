@@ -54,7 +54,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-20">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Section Header */}
+        {/* This is header section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Let's Work Together
@@ -66,12 +66,12 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Information */}
+          {/* This section view contact information */}
           <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-800 mb-8">Get In Touch</h2>
             
             <div className="space-y-6">
-              {/* Email */}
+              {/* Email details */}
               <div className="flex items-center space-x-4">
                 <div className="bg-blue-100 p-3 rounded-lg">
                   <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +89,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* LinkedIn */}
+              {/* Linkedin detais */}
               <div className="flex items-center space-x-4">
                 <div className="bg-blue-100 p-3 rounded-lg">
                   <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
@@ -109,7 +109,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* GitHub */}
+              {/* Github info */}
               <div className="flex items-center space-x-4">
                 <div className="bg-gray-200 p-3 rounded-lg">
                   <svg className="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
@@ -131,12 +131,12 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* contact form section */}
           <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-800 mb-8">Send Message</h2>
             
             <div className="space-y-6">
-              {/* Name */}
+              {/* Name section */}
               <div>
                 <label className="block text-gray-700 font-semibold mb-2">
                   Your Name *
@@ -154,7 +154,7 @@ const Contact = () => {
                 {errors.name && <p className="mt-1 text-red-500 text-sm">{errors.name}</p>}
               </div>
 
-              {/* Email */}
+              {/* Email details */}
               <div>
                 <label className="block text-gray-700 font-semibold mb-2">
                   Email Address *
@@ -172,7 +172,7 @@ const Contact = () => {
                 {errors.email && <p className="mt-1 text-red-500 text-sm">{errors.email}</p>}
               </div>
 
-              {/* Message */}
+              {/* Msg section */}
               <div>
                 <label className="block text-gray-700 font-semibold mb-2">
                   Your Message *
@@ -190,7 +190,7 @@ const Contact = () => {
                 {errors.message && <p className="mt-1 text-red-500 text-sm">{errors.message}</p>}
               </div>
 
-              {/* Button */}
+              {/* View buttons */}
               <button
                 onClick={handleSubmit}
                 className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-500 transform hover:scale-105 transition-all duration-300"

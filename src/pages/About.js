@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Header Section */}
+        {/* This is header section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-800 mb-4">
             About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Me</span>
@@ -15,13 +15,13 @@ const About = () => {
           </p>
         </div>
 
-        {/* Main Content Grid */}
+        {/* Main content grid section */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           
           {/* Left Column - Background & Education */}
           <div className="space-y-8">
             
-            {/* Background Section */}
+            {/* This is background section */}
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <h2 className="text-3xl font-semibold text-gray-800 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3"></div>
@@ -43,7 +43,7 @@ const About = () => {
               </div>
             </div>
             
-            {/* Education Section */}
+            {/* This is Education section */}
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <h2 className="text-3xl font-semibold text-gray-800 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mr-3"></div>
@@ -73,10 +73,10 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right Column - Skills */}
+          {/* Right Column view coloumns */}
           <div className="space-y-8">
             
-            {/* Technical Skills */}
+            {/* Technical skill section */}
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <h2 className="text-3xl font-semibold text-gray-800 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-3"></div>
@@ -84,7 +84,7 @@ const About = () => {
               </h2>
               
               <div className="space-y-6">
-                {/* Programming Languages */}
+                {/* This sectin view programming langiage section */}
                 <div>
                   <h3 className="text-lg font-semibold text-gray-700 mb-3">Programming Languages</h3>
                   <div className="flex flex-wrap gap-3">
@@ -94,7 +94,7 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* Frontend Development */}
+                {/* Frontend developing section */}
                 <div>
                   <h3 className="text-lg font-semibold text-gray-700 mb-3">Frontend Development</h3>
                   <div className="flex flex-wrap gap-3">
@@ -105,7 +105,7 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* UI/UX Design */}
+                {/* UI/UX design section */}
                 <div>
                   <h3 className="text-lg font-semibold text-gray-700 mb-3">UI/UX Design</h3>
                   <div className="flex flex-wrap gap-3">
@@ -116,7 +116,7 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* Tools & Others */}
+                {/* Tools and others section */}
                 <div>
                   <h3 className="text-lg font-semibold text-gray-700 mb-3">Tools & Others</h3>
                   <div className="flex flex-wrap gap-3">
@@ -129,7 +129,7 @@ const About = () => {
               </div>
             </div>
             
-            {/* Soft Skills */}
+            {/* Soft skill section */}
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <h2 className="text-3xl font-semibold text-gray-800 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-red-500 rounded-full mr-3"></div>
@@ -166,7 +166,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Goals & Aspirations Section */}
+        {/* This is Goals & Aspirations Section */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">My Goals & Aspirations</h2>
           <p className="text-lg mb-6 max-w-4xl mx-auto opacity-90">

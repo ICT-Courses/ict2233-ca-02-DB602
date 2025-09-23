@@ -1,4 +1,6 @@
 import React from "react";
+import wireframe1 from "../assets/wireframe1.png";
+import wireframe2 from "../assets/wireframe2.png";
 
 const Projects = () => {
   const projects = [
@@ -8,16 +10,18 @@ const Projects = () => {
       description:
         "A C# .NET Framework based voting system desktop application with MySQL database and custom dashboards.",
       githubLink: "https://github.com/DB602",
-      demoLink: "https://drive.google.com/file/d/1HSX4qKzHghXPFoOM0oSWn9O6uGSZ5OU-/view?usp=drive_link",
-      gradient: "from-blue-500 via-indigo-500 to-purple-500"
+      demoLink:
+        "https://drive.google.com/file/d/1HSX4qKzHghXPFoOM0oSWn9O6uGSZ5OU-/view?usp=drive_link",
     },
     {
       id: 2,
       title: "EduNova Institution Website",
       description:
         "Group project built using Flask, HTML, CSS, and JavaScript. I worked as the UI/UX designer and created wireframes using Figma.",
-      githubLink: "https://github.com/SD187/EduNova-Student-Registration-System",
-      demoLink: "https://your-edunova-demo.com",
+      githubLink:
+        "https://github.com/SD187/EduNova-Student-Registration-System",
+      demoLink:
+        "https://drive.google.com/file/d/1zX0wiXJheNVqdzi82dMys6wW1FSkfIiE/view?usp=sharing",
     },
     {
       id: 3,
@@ -25,14 +29,35 @@ const Projects = () => {
       description:
         "A recipe management web app built with React.js and Bootstrap. It helps users search, view, and organize recipes easily.",
       githubLink: "https://github.com/DB602",
-      demoLink: "https://your-recipe-demo.com",
+      demoLink:
+        "https://drive.google.com/file/d/1a5OxqVTRl7IqkU3CS-ki7r3LEmgBIjlq/view?usp=drive_link",
+    },
+    {
+      id: 4,
+      title: "VoxVotin Figma Wireframes - User Flow 1",
+      description:
+        "Complete UI/UX wireframes for the VoxVoting project, showcasing user registration flow, dashboard design, and navigation structure created in Figma.",
+      image: wireframe1,
+      githubLink: "https://github.com/DB602",
+      demoLink: "https://www.figma.com/proto/CXbGz5fQYJAjkcTaOsfwGd/Untitled?node-id=0-1&t=APL5xeYAZt3s5I5M-1",
+      isDesignProject: true,
+    },
+    {
+      id: 5,
+      title: "EduNova Figma Wireframes - User Flow 2",
+      description:
+        "Detailed wireframe prototypes showing the complete user journey, responsive design layouts, and interactive components for the student registration system.",
+      image: wireframe2,
+      githubLink: "https://github.com/DB602",
+      demoLink: "https://www.figma.com/proto/i5aA0kWGGWVOQcxTroDqAj/Untitled?node-id=0-1&t=sb31jZChl4OV9Ol4-1",
+      isDesignProject: true,
     },
   ];
 
   return (
-    <div className="py-16">
+    <div className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-800 mb-12 text-center">
+        <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-12 text-center">
           My Projects
         </h1>
 
@@ -40,36 +65,65 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              {/* Animated Gradient Project Name */}
-              <div className="w-full h-48 flex items-center justify-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 animate-gradient-x">
-                <h2 className="text-2xl font-bold text-white animate-pulse">
-                  {project.title}
-                </h2>
-              </div>
+              {project.isDesignProject ? (
+                <div className="w-full h-48 overflow-hidden bg-gray-100">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ) : (
+                <div className="w-full h-48 flex items-center justify-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+                  <h2 className="text-xl font-bold text-white text-center px-4">
+                    {project.title}
+                  </h2>
+                </div>
+              )}
 
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="flex space-x-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                  {project.description}
+                </p>
+
+                {project.isDesignProject && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">
+                      Figma
+                    </span>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">
+                      UI/UX Design
+                    </span>
+                    <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">
+                      Wireframing
+                    </span>
+                    <span className="bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs">
+                      Prototyping
+                    </span>
+                  </div>
+                )}
+
+                <div className="flex space-x-3">
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-colors"
+                    className="bg-gray-800 text-white px-4 py-2 rounded text-sm hover:bg-gray-700 transition-colors"
                   >
-                    GitHub
+                    {project.isDesignProject ? "Portfolio" : "GitHub"}
                   </a>
                   <a
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+                    className="bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition-colors"
                   >
-                    Live Demo
+                    {project.isDesignProject ? "View Design" : "Demo"}
                   </a>
                 </div>
               </div>
@@ -77,24 +131,6 @@ const Projects = () => {
           ))}
         </div>
       </div>
-
-      {/* Gradient Animation Keyframes */}
-      <style>
-        {`
-          @keyframes gradient-x {
-            0%, 100% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-          }
-          .animate-gradient-x {
-            background-size: 200% 200%;
-            animation: gradient-x 6s ease infinite;
-          }
-        `}
-      </style>
     </div>
   );
 };

@@ -1,15 +1,16 @@
 ﻿import React from 'react';
+import { Link } from 'react-router-dom';
 import profilePhoto from '../assets/profile-photo.jpg';
 
 const Home = () => {
   return (
     <div>
-      {/* Hero Section */}
+      {/* This is Hero section */}
       <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 min-h-screen flex items-center">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             
-            {/* Text Content */}
+            {/* Text content section */}
             <div className="flex-1 text-center lg:text-left">
               <div className="mb-6">
                 <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-4">
@@ -31,16 +32,25 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                {/* Navigate to projects page */}
+                <Link
+                  to="/projects"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg text-center"
+                >
                   View My Work
-                </button>
-                <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-600 hover:text-white transition-all duration-300">
+                </Link>
+
+                {/* Navigate to Contact page */}
+                <Link
+                  to="/contact"
+                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-600 hover:text-white transition-all duration-300 text-center"
+                >
                   Contact Me
-                </button>
+                </Link>
               </div>
             </div>
 
-            {/* Photo Section */}
+            {/* This is photo Section */}
             <div className="flex-shrink-0">
               <div className="relative">
                 {/* Decorative background elements */}
@@ -51,7 +61,7 @@ const Home = () => {
                 <div className="relative z-10 w-80 h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                   <img
                     src={profilePhoto}
-                    alt="Dasunika Bandara - Full Stack Developer"
+                    alt="Dasunika Bandara - UI/UX Designer & Frontend Developer"
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                     onError={(e) => {
                       // Fallback if image doesn't exist

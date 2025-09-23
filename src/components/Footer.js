@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Copyright */}
         <p className="text-sm">&copy; {new Date().getFullYear()} Dasunika Bandara. All rights reserved.</p>
 
-        {/* Social Links */}
+        {/* Social meadia Links */}
         <div className="flex justify-center space-x-6 mt-4">
           <a
             href="https://github.com/DB602"
