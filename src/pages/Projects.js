@@ -16,7 +16,7 @@ const Projects = () => {
       title: "EduNova Institution Website",
       description:
         "Group project built using Flask, HTML, CSS, and JavaScript. I worked as the UI/UX designer and created wireframes using Figma.",
-      githubLink: "https://github.com/yourusername/edunova",
+      githubLink: "https://github.com/SD187/EduNova-Student-Registration-System",
       demoLink: "https://your-edunova-demo.com",
     },
     {
@@ -24,7 +24,7 @@ const Projects = () => {
       title: "Recipe App",
       description:
         "A recipe management web app built with React.js and Bootstrap. It helps users search, view, and organize recipes easily.",
-      githubLink: "https://github.com/yourusername/recipe-app",
+      githubLink: "https://github.com/DB602",
       demoLink: "https://your-recipe-demo.com",
     },
   ];
